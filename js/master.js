@@ -148,7 +148,7 @@ galleryImgs.forEach((image) => {
     pageOverlay.className = "overlay";
 
     let imgContainer = document.createElement("div");
-    imgContainer.className = "img-comtainer";
+    imgContainer.className = "img-container";
 
     let clickedImage = document.createElement("img");
     clickedImage.src = image.src;
@@ -170,7 +170,7 @@ galleryImgs.forEach((image) => {
 });
 
 document.addEventListener("click", (e) => {
-  if (e.target.className === "close-btn") {
+  if (e.target.className === "close-btn" || e.target.className === "overlay") {
     let btnContainer = document.querySelector(".overlay");
     btnContainer.remove();
   }
